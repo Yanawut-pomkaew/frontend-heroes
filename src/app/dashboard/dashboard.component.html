@@ -1,4 +1,9 @@
-<h3>Top Heroes</h3>
-<div *ngFor="let hero of heroesSection">
-    {{hero}}
+
+<h2 class="title-section">Top Heroes</h2>
+
+<div class="hero-container">
+  <a *ngFor="let hero of heroesSection" routerLink="/detail/{{hero.id}}">
+    {{hero.name}}
+  </a>   
 </div>
+

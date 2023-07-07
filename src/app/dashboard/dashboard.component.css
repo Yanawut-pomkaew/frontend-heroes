@@ -1,0 +1,23 @@
+
+.hero-container {
+    display :  grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    padding: 10px;
+    
+  }
+  
+  .hero-container > a {
+    background-color: #42545C;
+    padding : 12px 20px;
+    border-radius : 4px;
+    text-align: center;
+    color :  white;
+    font-size: 20px;
+    cursor : pointer;
+    text-decoration: none;
+}
+
+.title-section { 
+    text-align: center;
+}

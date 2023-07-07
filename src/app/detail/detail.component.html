@@ -1,0 +1,11 @@
+<div *ngFor="let selectedHero of selectedHero">
+    <h2>{{selectedHero.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{selectedHero.id }}</div>
+    <div>
+      <label for="hero-name">Hero name: </label>
+      <input id="hero-name" placeholder="Hero name" [(ngModel)]="selectedHero.name"/>
+    </div>
+    <button class="back" type="button" (click)="back()">Back</button>
+    <button class="delete" type="button" (click)="deleteHero()">Delete</button>
+    <button class="delete" type="button" (click)="updateHero()">Update</button>
+</div>

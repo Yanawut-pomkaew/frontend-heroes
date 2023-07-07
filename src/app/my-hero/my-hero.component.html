@@ -1,0 +1,8 @@
+<h2>{{title}}</h2>
+
+<div class="myHero-section">
+    <a class="each-hero" *ngFor="let hero of heroesSection" routerLink="/detail/{{hero.id}}">
+        <div class="id-section">{{hero.id}}</div>
+        <div class="name-section">{{hero.name}}</div>
+    </a>
+</div>

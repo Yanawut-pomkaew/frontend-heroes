@@ -1,13 +1,14 @@
-import { Component,  OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {HeroesService} from '../../shared/heroes.service';
 import { Heroes } from 'src/models/Heroes';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-my-hero',
+  templateUrl: './my-hero.component.html',
+  styleUrls: ['./my-hero.component.css']
 })
-export class DashboardComponent implements OnInit{
+export class MyHeroComponent implements OnInit {
+  title = "My Heroes";
 
   heroesSection:Heroes[] = [];
 
@@ -16,11 +17,9 @@ export class DashboardComponent implements OnInit{
   ngOnInit():void {
     this.HeroesService.getAllHeroes().subscribe( response => {
       this.heroesSection = response;
-      
+      console.log(this.heroesSection);
     })
- 
-  }
 
-  
-  
+
+  }
 }
